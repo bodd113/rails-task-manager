@@ -1,0 +1,9 @@
+<ul>
+<%= @tasks.each do |t| %>
+  <li><p> <%= t.name %></p></li>
+<%= link_to "Task", task_path(t) %>
+<%= link_to "Update Task", edit_task_path(t) %>
+<%= link_to "Delete Task", task_path(t), method: :delete %>
+<% end %>
+</ul>
+<%= link_to "Create Task", new_task_path %>
